@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      label {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin: 0;
+        width: 150px;
+        text-align: end;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Hi Form</legend>
+
+      <label for="name">
+        <p>Нэр</p>
+        <input type="text" id="name" />
+      </label>
+
+      <label for="lastname">
+        <p>Овог</p>
+        <input type="text" id="lastname" />
+      </label>
+
+      <label for="email">
+        <p>И-Мэйл</p>
+        <input type="email" id="email" />
+      </label>
+
+      <label for="phone">
+        <p>Утас</p>
+        <input type="number" id="phone" />
+      </label>
+
+      <label for="age">
+        <p>Нас</p>
+        <input type="number" id="age" />
+      </label>
+
+      <label for="birthday">
+        <p>Төрсөн өдөр</p>
+        <input type="date" id="birthday" />
+      </label>
+
+      <label for="gender">
+        <p>Хүйс</p>
+        <select id="gender">
+          <option>Сонгох...</option>
+          <option>эрэгтэй</option>
+          <option>эмэгтэй</option>
+        </select>
+      </label>
+
+      <label for="description">
+        <p>Тодорхойлолт</p>
+        <textarea id="description"></textarea>
+      </label>
+
+      <label for="students">
+        <p>Сурагч эсэх</p>
+        <input type="checkbox" id="student1" />
+        <label for="student1">Тийм</label>
+        <input type="checkbox" id="student2" />
+        <label for="student2">Үгүй</label>
+      </label>
+    </fieldset>
+  </body>
+</html>
