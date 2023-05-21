@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .card {
+        max-width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media only screen and (max-width: 576px) {
+        .card {
+          background-color: green;
+        }
+        p::after {
+          content: "xs (extra small) < 576px";
+        }
+      }
+
+      @media only screen and (min-width: 577px) and (max-width: 768px) {
+        .card {
+          background-color: burlywood;
+        }
+        p::after {
+          content: "sm (small) => 576px";
+        }
+      }
+
+      @media only screen and (min-width: 769px) and (max-width: 992px) {
+        .card {
+          background-color: aqua;
+        }
+        p::after {
+          content: "md (medium) => 768px";
+        }
+      }
+
+      @media only screen and (min-width: 993px) and (max-width: 1200px) {
+        .card {
+          background-color: pink;
+        }
+        p::after {
+          content: "lg (large) => 992px";
+        }
+      }
+
+      @media only screen and (min-width: 1201px) and (max-width: 1400px) {
+        .card {
+          background-color: red;
+        }
+        p::after {
+          content: "xl (extra large) => 1200px";
+        }
+      }
+
+      @media only screen and (min-width: 1401px) {
+        .card {
+          background-color: darksalmon;
+        }
+        p::after {
+          content: "xxl (extra extra large) => 1400px";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <p></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/b2fcde9cef.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: pink;
+      }
+
+      .search-box {
+        height: 30px;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        border: 2px solid pink;
+      }
+
+      .search-box:hover input {
+        width: 240px;
+      }
+
+      .search-box input {
+        width: 0;
+        outline: none;
+        border: none;
+        transition: 0.8s;
+        background: transparent;
+        margin-left: 5px;
+      }
+
+      .search-box a .fa-solid {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-box">
+      <a class="search-btn" href="#">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <input class="search-text" type="text" placeholder="search" />
+    </div>
+  </body>
+</html>
