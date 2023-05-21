@@ -48,9 +48,18 @@
       input,
       select,
       textarea,
-      button {
+      button:valid {
         width: 100%;
         background-color: #fff;
+        border: solid 2px green;
+      }
+      input,
+      select,
+      textarea,
+      button:invalid {
+        width: 100%;
+        background-color: #fff;
+        border: solid 2px red;
       }
       label {
         display: block;
@@ -78,17 +87,17 @@
 
               <label for="name">
                 Нэр
-                <input id="name" type="text" />
+                <input required id="name" type="text" />
               </label>
 
               <label for="email">
                 И-мэйл
-                <input id="email" type="email" />
+                <input required id="email" type="email" pattern="\w{3,16}" />
               </label>
 
               <label for="age">
                 Нас
-                <input id="age" type="number" />
+                <input required id="age" type="number" min="14" max="99" />
               </label>
             </fieldset>
 
@@ -97,7 +106,7 @@
 
               <label>
                 Та өдөрт хэдэн цаг social media ашигладаг вэ?
-                <select>
+                <select required>
                   <option>1-2 цаг</option>
                   <option>2-3 цаг</option>
                   <option>3-4 цаг</option>
@@ -109,12 +118,12 @@
                 Та онлайнаар худалдан авалт хийх , дэлгүүр орж худалдан авалт
                 хийхийн алийг нь илүүд үздэг вэ?
                 <p>
-                  <input name="prefer" type="radio" />
+                  <input required name="prefer" type="radio" />
                   <span>Онлайн худалдан авалт хийх</span>
                 </p>
 
                 <p>
-                  <input name="prefer" type="radio" />
+                  <input required name="prefer" type="radio" />
                   <span>Дэлгүүр орж худалдан авалт хийх</span>
                 </p>
               </label>
@@ -156,7 +165,10 @@
               </label>
             </fieldset>
             <p>Санал хүсэлт</p>
-            <textarea placeholder="Санал хүсэлтээ энд бичнэ үү..."></textarea>
+            <textarea
+              maxlength="300"
+              placeholder="Санал хүсэлтээ энд бичнэ үү..."
+            ></textarea>
             <button>Илгээх</button>
           </form>
         </div>
