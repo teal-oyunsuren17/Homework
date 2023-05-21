@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background-color: teal;
+      }
+      marquee {
+        border: 2px solid palevioletred;
+        width: 50vw;
+        margin-left: 25vw;
+      }
+      #color1 {
+        width: 50vw;
+        height: 5vh;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <marquee behavior="alternate" direction="right">Oyuka's creation</marquee>
+    <div class="menu">
+      <button id="color" onclick="background()">
+        Click to Set background color
+      </button>
+    </div>
+
+    <script>
+      const color = document.getElementById("body");
+      function background() {
+        let colorCode1 = Math.floor(Math.random() * 256) + 1;
+        let colorCode2 = Math.floor(Math.random() * 256) + 1;
+        let colorCode3 = Math.floor(Math.random() * 256) + 1;
+        color.style.cssText = `
+    background-color: rgb(${colorCode1},${colorCode2},${colorCode3});
+    `;
+        document.getElementById("color").style.cssText = `
+    color: rgb(${colorCode3},${colorCode2},${colorCode1});
+    background-color: rgb(${colorCode2},${colorCode3},${colorCode1});`;
+      }
+    </script>
+  </body>
+</html>
